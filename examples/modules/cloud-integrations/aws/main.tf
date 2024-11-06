@@ -274,6 +274,10 @@ resource "newrelic_cloud_aws_integrations" "newrelic_cloud_integration_pull" {
   route53 {}
   ses {}
   sns {}
+
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "aws_s3_bucket" "newrelic_configuration_recorder_s3" {
