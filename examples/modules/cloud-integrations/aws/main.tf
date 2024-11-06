@@ -275,6 +275,7 @@ resource "newrelic_cloud_aws_integrations" "newrelic_cloud_integration_pull" {
   ses {}
   sns {}
 
+  # Allow Terraform to set this up, but allow changes in the NR UI after that.
   lifecycle {
     ignore_changes = all
   }
